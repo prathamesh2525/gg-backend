@@ -26,6 +26,7 @@ This repository contains the source code for an Event Management Service built w
 #### Installation
 
 1. Clone this repository to your local machine.
+   - `https://github.com/prathamesh2525/gg-backend`
 2. Navigate to the project directory.
 3. Run `npm install` to install dependencies.
 
@@ -35,8 +36,10 @@ This repository contains the source code for an Event Management Service built w
 2. Add the following environment variables:
 
    ```makefile
-   PORT=3000
-   MONGODB_CONNECTION_URL=<Your MongoDB Connection URL>
+    PORT = 3000
+    MONGODB_CONNECTION_URL = "YOUR MONGODB CONNECTION URL"
+    WEATHER_API_URL = "Weather API specified in the design doc of the assignment"
+    DISTANCE_API_URL = "Distance API specified in the design doc of the assignment"
    ```
 
 #### RUn the Server
