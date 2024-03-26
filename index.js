@@ -13,6 +13,9 @@ dotenv.config()
 // Middleware
 app.use(express.json())
 
+app.get("/", (req, res) => {
+  res.json({ message: "Working Fine" })
+})
 // Routes
 app.use("/events", eventRoutes)
 
