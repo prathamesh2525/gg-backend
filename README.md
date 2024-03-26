@@ -97,3 +97,29 @@ This repository contains the source code for an Event Management Service built w
 
 - Error Response:
   - Status: 500 Internal Server Error
+
+### Curl Requests
+
+- Create Request (will have to pass body):
+
+Hosted API: https://gg-backend-adi8.onrender.com/ (might take around a minute to kickstart)
+
+```bash
+$body = @{
+    "event_name" = "Event Name"
+    "city_name" = "City Name"
+    "date" = "YYYY-MM-DD"
+    "time" = "HH:MM:SS"
+    "latitude" = 40.7128
+    "longitude" = -74.0060
+} | ConvertTo-Json
+
+Invoke-WebRequest -Uri 'https://gg-backend-adi8.onrender.com/events/create' -Method Post -Body $body -ContentType 'application/json'
+
+```
+
+- Filter Request:
+
+```bash
+Invoke-WebRequest -Uri 'https://gg-backend-adi8.onrender.com/events/find?latitude=37.7749&longitude=-122.4194&date=2024-03-30' -Method Post
+```
